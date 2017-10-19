@@ -1,0 +1,20 @@
+﻿/*
+  enter  source code file  information here...
+
+*/
+
+#include "WProgram.h"
+#include "Test.h"
+
+Test::Test()
+{
+  
+
+}
+
+void Test::voidName()
+{
+ 
+
+
+}

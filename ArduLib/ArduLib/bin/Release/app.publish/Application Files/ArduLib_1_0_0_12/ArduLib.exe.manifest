@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.0.0.12" name="ArduLib.exe" publicKeyToken="c21f292b1ca2ea1a" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ArduLib" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="ArduLib.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ArduLib.exe" size="2059264">
+      <assemblyIdentity name="ArduLib" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>NMDHNJ29J0pjkw4s7veKGaxB/Mc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="icon.ico" size="292350">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>b3zagzLLQ4mYkH/LdGyZF4fOEgw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=SMART-PC\Asemani" issuerKeyHash="90d5eb912616a0d2ecb9bfa421c2f281801ab05c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>MQ9LeDfdTDCWr+1uf03YPSOR37U=</DigestValue></Reference></SignedInfo><SignatureValue>JSKZTxiWwi7iLvcJbA1VmbXnLcKwZ46JtKCZOKdlgJlbfulE19o/6Yc5gGBVvMO8UQfJLrwnnj/EaCktLuxv/jBzCPgeHLYxGq3bJ895uTFgS8Uz9yWKw7lwhpdGOxaZzXqhqJuMzws/FPFcA3uhi2DIGKHBB2iTPFBJ9Z9w1+s=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>nkjDgE9Qy48C6EcHoNlt19RNMhNmwygJMnkVhtwg2RWSauJngzTq9ddmm5A8Us0CdLXuRVhieL0KVJYKSxgYB7F+eKS8On/Dy9+YhByz6ZLTQ1LrDXERaQYg7SwXXaIhiTW1D1UY4k1wDJ1I4kYmf30jJANXmUW9dtv4yoJvaRU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b5df91233dd84d7f6eedaf96304cdd37784b0f31" Description="" Url=""><as:assemblyIdentity version="1.0.0.12" name="ArduLib.exe" publicKeyToken="c21f292b1ca2ea1a" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SMART-PC\Asemani</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>cqrxU50uYyz/0tQQ0BV8KOeebfc=</DigestValue></Reference></SignedInfo><SignatureValue>SA+IojvILxggnprIW2g4fUvTgPE8+zvqeG+18ZSkKmYJ/JhnsfkiKonI3KsmfowRrMPbBmZBMrFZLMiA5Glt2fzXz0jXiJRLcXP/iH5xOkB+cAQ0XqUEJYz8DvMBMKMtgPSRwz9py7OMfzHnJxXQ3sMhFPiA51KcfPiKWjHYgNQ=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>nkjDgE9Qy48C6EcHoNlt19RNMhNmwygJMnkVhtwg2RWSauJngzTq9ddmm5A8Us0CdLXuRVhieL0KVJYKSxgYB7F+eKS8On/Dy9+YhByz6ZLTQ1LrDXERaQYg7SwXXaIhiTW1D1UY4k1wDJ1I4kYmf30jJANXmUW9dtv4yoJvaRU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCAT6gAwIBAgIQfapr9uWTf7RJgTTYN64yNjAJBgUrDgMCHQUAMCsxKTAnBgNVBAMeIABTAE0AQQBSAFQALQBQAEMAXABBAHMAZQBtAGEAbgBpMB4XDTE3MTAxNTA4NTQxM1oXDTE4MTAxNTE0NTQxM1owKzEpMCcGA1UEAx4gAFMATQBBAFIAVAAtAFAAQwBcAEEAcwBlAG0AYQBuAGkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ5Iw4BPUMuPAuhHB6DZbdfUTTITZsMoCTJ5FYbcINkVkmriZ4M06vXXZpuQPFLNAnS17kVYYni9ClSWCksYGAexfnikvDp/w8vfmIQcs+mS00NS6w1xEWkGIO0sF12iIYk1tQ9VGOJNcAydSOJGJn99IyQDV5lFvXbb+MqCb2kVAgMBAAEwCQYFKw4DAh0FAAOBgQCArg3FlK3boqkBOg0jEVYNAS0GQyvgSpf1ZsliL/ppCvLN61BymWWf1gqbqFpXzzJrSH0sfZ9fvJfa4WGUENi+ZM3Ra4KCrPvUdoDbUsfrAqkHbnNzuhEGSS4Y4NBC8RRobUu/bKs7BaEw4sX6Ep+loXFV1GWulH5iJQYIaDiOVg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
