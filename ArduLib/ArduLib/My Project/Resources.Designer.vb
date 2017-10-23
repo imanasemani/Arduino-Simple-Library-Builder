@@ -81,9 +81,30 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property about3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("about3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property about4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("about4", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property anim_loading_sm_082208_1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("anim_loading_sm_082208[1]", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property info() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("info", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -105,6 +126,13 @@ Namespace My.Resources
         Friend ReadOnly Property msg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("msg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property yellowp() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("yellowp", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

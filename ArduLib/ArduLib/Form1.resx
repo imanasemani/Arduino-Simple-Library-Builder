@@ -226,6 +226,10 @@ Blinking	KEYWORD1
 startBlink	KEYWORD2
 
 #######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
 # Constants (LITERAL1)
 #######################################
 
@@ -293,6 +297,52 @@ void loop()
 }
 </value>
   </data>
+  <data name="property_msg.Text" xml:space="preserve">
+    <value>name - the name of the library. Library names must contain only basic letters ( A - Z or a - z )
+and numbers ( 0 - 9 ), spaces ( ), underscores ( _ ), dots ( . ) and dashes ( - ). It cannot start
+or end with a space, and also it cannot start with a number.
+version - version of the library. Version should be semver compliant. 1.2.0 is correct; 1.2 is
+accepted; r5, 003, 1.1c are invalid
+author - name/nickname of the authors and their email addresses (not mandatory) separated
+by comma ","
+maintainer - name and email of the maintainer
+sentence - a sentence explaining the purpose of the library
+paragraph - a longer description of the library. The value of sentence always will be prepended,
+so you should start by writing the second sentence here
+category - if present, one of these:
+Display
+Communication
+Signal Input/Output
+Sensors
+Device Control
+Timing
+Data Storage
+Data Processing
+Other
+url - the URL of the library project, for a person to visit. Can be a github or similar page as well
+architectures - a comma separated list of architectures supported by the library. If the library
+doesn’t contain architecture specific code use “*” to match all architectures
+dot_a_linkage - (available from IDE 1.6.0 / arduino-builder 1.0.0-beta13) when set to true ,
+the library will be compiled using a .a (archive) file. First, all source files are compiled into .o
+files as normal. Then instead of including all .o files in the linker command directly, all .o files
+are saved into a .a file, which is then included in the linker command.
+includes - (available from IDE 1.6.10) a comma separated list of files to be added to the
+sketch as #include &lt;...&gt; lines. This property is used with the "Include library" command in
+the IDE. If the property is undefined all the headers files (.h) on the root source folder are
+included.</value>
+  </data>
+  <data name="TextBox7.Text" xml:space="preserve">
+    <value>name=Blinking
+version=1.0
+author=Iman Asemani &lt;Post.Asemani@Gmail.Com&gt;
+maintainer=Asemani Personal Laboratory &lt;Post.Asemani@Gmail.Com&gt;
+sentence=A library that makes digital pulse's on arduino digital pin's
+paragraph=make pulse's on digital pin's with custom duration
+category=Signal Input/Output
+url=https://github.com/imanasemani/Arduino-Simple-Library-Builder
+architectures=*
+includes=Blinking.h</value>
+  </data>
   <metadata name="SaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>25, 11</value>
   </metadata>
@@ -302,39 +352,13 @@ void loop()
   <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>310, 12</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        R0lGODlhEAAQAPcEAMnJyVdXV5CQkLy8vP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        ACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFAAAEACwAAAAAEAAQAAAIUwAHCBxAgICAgwIKBlgYYCBBgwgV
-        MnRYEGFCAgwbDqwYESPDgiBDihxJUiSAkwBKolyZkiRLlCpfthy5sqTNmyZhEqi5U2ZBnjJbAvXZ8+RP
-        lAEBACH5BAUAAAQALAAAAAAQAAoAAAg8AAEIBECAwICDAwoKWChgIEGDCBUydFgQYUICDBsOrBgRI8OC
-        IEOKHEmypMkAKAOYBJlS5UoCLV/CTBkQACH5BAUAAAQALAYAAAAKABAAAAg5AAEIBECAwICDAwYSNIhQ
-        YUGECQc+RFiwosWLGDEK2ChAI0ePG0F2zEiyJIEAKANgTKnyIsuVKQMCACH5BAUAAAQALAYAAAAKABAA
-        AAg7AAkIHAigIICBBA0iFGjw4MKGCyNKnDig4oCIFi8uzIjR4sSPAwOIDCBQgEkBI0kSOIlyZMmTKV+a
-        DAgAIfkEBQAABAAsAAAGABAACgAACD0ACQgcSFAggIMACiokgDDhQoINH0JEKLGiRYEBMgYQKKCjAIED
-        Qg7QuJGAx48ERI7UyNEjSJEkW3Z8GTIgACH5BAUAAAQALAAABgAQAAoAAAg7AAMIDECgoMGDBQcSRMhQ
-        IcOGAx9KnEiRooCLAgoO2DigIICPADBmJMCxIwGQITFq5OgRpMiVG1t+DAgAIfkEBQAABAAsAAAAAAoA
-        EAAACDoAAwgMQKCgwYEEDRZEqHDhwIYQI0oUQFEAxIoWG2K8WFGiR48DQg4oCKAkAJEjCZg8KZKkSZQu
-        SwYEACH5BAUAAAQALAAAAAAKABAAAAg5AAUIFECAQICDAQYSNIhQYUGECQc+RFiwosWLGAdoHJBxY0eN
-        HzliHEnSIoCTADCiTHlxpUqUGAMCADs=
-</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>54</value>
+  <metadata name="popup_menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>442, 12</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>56</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABABUAEBAAAAEACABoBQAAVgEAABAQAAABABgAaAMAAL4GAAAQEAAAAQAgAGgEAAAmCgAAGBgAAAEA

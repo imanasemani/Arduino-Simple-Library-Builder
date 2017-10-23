@@ -30,7 +30,7 @@
     <PublisherName>Asemani Personal Laboratory</PublisherName>
     <SuiteName>Asemani Personal Laboratory</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -171,10 +171,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\yellowp.png" />
+    <None Include="Resources\info.gif" />
+    <None Include="Resources\about.png" />
     <None Include="Resources\msg.jpg" />
     <None Include="Resources\main.jpg" />
     <None Include="Resources\anim_loading_sm_082208[1].gif" />
-    <None Include="Resources\about.png" />
     <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>

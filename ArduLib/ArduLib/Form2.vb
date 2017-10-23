@@ -6,17 +6,19 @@
         Timer1.Enabled = False
     End Sub
 
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
-
-    End Sub
+    
 
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
         Dim pt As String
+        Application.DoEvents()
         pt = Replace(Application.StartupPath + "\inner_keywords.apl", "\\", "\")
         Kill(pt)
         System.IO.File.WriteAllText(pt, TextBox1.Text)
+        Application.DoEvents()
 
 
     End Sub
+
+  
 End Class

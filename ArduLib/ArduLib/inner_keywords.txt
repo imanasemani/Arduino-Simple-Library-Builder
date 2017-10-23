@@ -135,6 +135,7 @@ operator
 using
 friend
 enum
+struct
 inline
 bool
 while

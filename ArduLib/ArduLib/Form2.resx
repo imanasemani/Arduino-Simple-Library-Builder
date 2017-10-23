@@ -288,9 +288,11 @@ operator
 using
 friend
 enum
+struct
 inline
 bool
 while
+position
 _h
 .h
 ::

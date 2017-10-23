@@ -1,3 +1,4 @@
+//This is a bit of defensive coding that prevents someone from “double including” the header file information
 #ifndef Blinking_h
 #define Blinking_h
 
@@ -9,9 +10,11 @@
     #include <avr/io.h>
   #endif
   #include "WProgram.h"
+  #include "pins_arduino.h"
+  #include "WConstants.h"
 #endif
 
-#include <inttypes.h>
+// #include <inttypes.h>
 // #include <Stream.h>
 // #include <SoftwareSerial.h>
 

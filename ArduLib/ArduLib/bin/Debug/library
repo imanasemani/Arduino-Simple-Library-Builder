@@ -1,0 +1,10 @@
+﻿name=Blinking
+version=1.0
+author=Iman Asemani <Post.Asemani@Gmail.Com>
+maintainer=Asemani Personal Laboratory <Post.Asemani@Gmail.Com>
+sentence=A library that makes digital pulse's on arduino digital pin's
+paragraph=make pulse's on digital pin's with custom duration
+category=Signal Input/Output
+url=https://github.com/imanasemani/Arduino-Simple-Library-Builder
+architectures=*
+includes=Blinking.h

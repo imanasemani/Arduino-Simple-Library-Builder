@@ -11,10 +11,11 @@
         TextBox2.Text = Replace(TextBox2.Text, Label3.Text, TextBox4.Text)
         TextBox3.Text = Replace(TextBox3.Text, Label3.Text, TextBox4.Text)
         TextBox5.Text = Replace(TextBox5.Text, Label3.Text, TextBox4.Text)
+        TextBox7.Text = Replace(TextBox7.Text, Label3.Text, TextBox4.Text)
         Label3.Text = TextBox4.Text
         Call full_color_parser(TextBox1, Color.Brown)
         Call full_color_parser(TextBox2, Color.Brown)
-        Call full_color_parser(TextBox5, Color.Brown)
+        Call full_color_parser(TextBox5, Color.DarkCyan)
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
@@ -30,7 +31,7 @@
             Label3.Text = "New"
             Call full_color_parser(TextBox1, Color.Brown)
             Call full_color_parser(TextBox2, Color.Brown)
-            Call full_color_parser(TextBox5, Color.Brown)
+            Call full_color_parser(TextBox5, Color.DarkCyan)
         End If
     End Sub
 
@@ -43,7 +44,7 @@
         lbl_header_file.Text = SaveFileDialog1.FileName
         If lbl_header_file.Text = "" Then Exit Sub
 
-        System.IO.File.WriteAllText(lbl_header_file.Text, TextBox1.Text)
+        System.IO.File.WriteAllText(lbl_header_file.Text, TextBox1.Text) ', System.Text.Encoding.UTF8)
         MessageBox.Show("Header file saved successfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
@@ -77,7 +78,7 @@
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        SaveFileDialog1.Title = "Save source file to:"
+        SaveFileDialog1.Title = "Save example file to:"
         SaveFileDialog1.FileName = TextBox6.Text
         SaveFileDialog1.Filter = "Arduino Source Code file (*.ino)|*.ino|All files (*.*)|*.*"
         SaveFileDialog1.ShowDialog()
@@ -92,10 +93,14 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        'On Error Resume Next
+
+    End Sub
+
+    Private Sub make_library()
+
         Dim dirpath As String
 
-
+        FolderBrowserDialog1.ShowNewFolderButton = True
         FolderBrowserDialog1.ShowDialog()
         dirpath = FolderBrowserDialog1.SelectedPath
         If System.IO.Directory.Exists(dirpath + "\" + TextBox4.Text) = True Then
@@ -109,7 +114,8 @@
         End If
         If dirpath <> "" Then
             MkDir(dirpath + "\" + TextBox4.Text)
-
+            MkDir(dirpath + "\" + TextBox4.Text + "\Documentation")
+            MkDir(dirpath + "\" + TextBox4.Text + "\utility")
             'header
             System.IO.File.WriteAllText(dirpath + "\" + TextBox4.Text + "\" + TextBox4.Text + ".h", TextBox1.Text)
 
@@ -132,15 +138,44 @@
     End Sub
 
     Private Sub Form1_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        End
+        e.Cancel = True
+        Dim msg As String
+        msg = MsgBox("Are you sure you want to exit?", vbQuestion + vbYesNo, "Exit")
+        If msg = vbYes Then
+            End
+        Else
+            Me.Visible = True
+        End If
     End Sub
+
+
+    Private Sub Form1_HandleDestroyed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.HandleDestroyed
+
+    End Sub
+
+    Private Sub Form1_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+        If e.KeyCode = Keys.F5 Then
+            Call full_color_parser(TextBox1, Color.Brown)
+            Call full_color_parser(TextBox2, Color.Brown)
+            Call full_color_parser(TextBox5, Color.DarkCyan)
+        End If
+        
+    End Sub
+
+    Private Sub Form1_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Leave
+
+    End Sub
+
+   
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Call load_inner_ketwords()
         Call full_color_parser(TextBox1, Color.Brown)
         Call full_color_parser(TextBox2, Color.Brown)
-        Call full_color_parser(TextBox5, Color.Brown)
+        Call full_color_parser(TextBox5, Color.DarkCyan)
+
+
     End Sub
 
     Private Sub load_inner_ketwords()
@@ -171,7 +206,7 @@
         TextBox1.Text = System.IO.File.ReadAllText(header_path)
         Call full_color_parser(TextBox1, Color.Brown)
         Call full_color_parser(TextBox2, Color.Brown)
-        Call full_color_parser(TextBox5, Color.Brown)
+        Call full_color_parser(TextBox5, Color.DarkCyan)
     End Sub
 
     Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
@@ -188,7 +223,7 @@
         TextBox2.Text = System.IO.File.ReadAllText(source_path)
         Call full_color_parser(TextBox1, Color.Brown)
         Call full_color_parser(TextBox2, Color.Brown)
-        Call full_color_parser(TextBox5, Color.Brown)
+        Call full_color_parser(TextBox5, Color.DarkCyan)
     End Sub
 
     Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
@@ -205,7 +240,7 @@
         TextBox3.Text = System.IO.File.ReadAllText(keyword_path)
         Call full_color_parser(TextBox1, Color.Brown)
         Call full_color_parser(TextBox2, Color.Brown)
-        Call full_color_parser(TextBox5, Color.Brown)
+        Call full_color_parser(TextBox5, Color.DarkCyan)
     End Sub
 
     Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
@@ -222,7 +257,7 @@
         TextBox5.Text = System.IO.File.ReadAllText(exam_path)
         Call full_color_parser(TextBox1, Color.Brown)
         Call full_color_parser(TextBox2, Color.Brown)
-        Call full_color_parser(TextBox5, Color.Brown)
+        Call full_color_parser(TextBox5, Color.DarkCyan)
     End Sub
 
 
@@ -272,7 +307,6 @@
 
     End Function
 
-
     Private Sub Button14_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click
         Call full_color_parser(TextBox2, Color.Brown)
     End Sub
@@ -283,7 +317,7 @@
 
 
     Private Sub Button16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button16.Click
-        Call full_color_parser(TextBox5, Color.Brown)
+        Call full_color_parser(TextBox5, Color.DarkCyan)
     End Sub
 
     Private Function full_color_parser(ByRef TB As RichTextBox, ByVal Col As Color) As Int32
@@ -352,7 +386,14 @@
             word_temp = ""
             TextBox1.SelectionColor = Color.Black
         End If
-
+        If e.KeyCode = Keys.Tab Then
+            TextBox1.SelectedText = Chr(9)
+        End If
+        If e.KeyCode = Keys.F5 Then
+            Call full_color_parser(TextBox1, Color.Brown)
+            Call full_color_parser(TextBox2, Color.Brown)
+            Call full_color_parser(TextBox5, Color.DarkCyan)
+        End If
     End Sub
 
     Private Sub TextBox1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TextBox1.MouseUp
@@ -437,6 +478,14 @@
             word_temp = ""
             TextBox2.SelectionColor = Color.Black
         End If
+        If e.KeyCode = Keys.Tab Then
+            TextBox2.SelectedText = Chr(9)
+        End If
+        If e.KeyCode = Keys.F5 Then
+            Call full_color_parser(TextBox1, Color.Brown)
+            Call full_color_parser(TextBox2, Color.Brown)
+            Call full_color_parser(TextBox5, Color.DarkCyan)
+        End If
     End Sub
 
     Private Sub TextBox2_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TextBox2.MouseUp
@@ -482,6 +531,18 @@
             word_temp = ""
             TextBox5.SelectionColor = Color.Black
         End If
+        If e.KeyCode = Keys.Tab Then
+            TextBox5.SelectedText = Chr(9)
+        End If
+        If e.KeyCode = Keys.F5 Then
+            Call full_color_parser(TextBox1, Color.Brown)
+            Call full_color_parser(TextBox2, Color.Brown)
+            Call full_color_parser(TextBox5, Color.DarkCyan)
+        End If
+    End Sub
+
+    Private Sub TextBox5_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TextBox5.MouseClick
+
     End Sub
 
     Private Sub TextBox5_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TextBox5.MouseUp
@@ -507,7 +568,7 @@
                 If (startingPoint >= 0) Then
                     TextBox5.SelectionStart = startingPoint
                     TextBox5.SelectionLength = word_temp.Length
-                    TextBox5.SelectionColor = Color.Brown
+                    TextBox5.SelectionColor = Color.DarkCyan
                 End If
             Loop Until startingPoint < 0
             TextBox5.DeselectAll()
@@ -550,5 +611,156 @@
     Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
         TextBox3.SelectedText = Chr(9)
         TextBox3.Focus()
+    End Sub
+
+    Private Sub Button13_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button13.MouseLeave
+        Label6.Text = ""
+    End Sub
+
+    Private Sub Button13_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button13.MouseMove
+        Label6.Text = "Parsing the code and indicate the keywords"
+    End Sub
+
+    Private Sub Button8_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button8.MouseLeave
+        Label6.Text = ""
+    End Sub
+
+    Private Sub Button8_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button8.MouseMove
+        Label6.Text = "import a page file and overwrite on the current page..."
+    End Sub
+
+    Private Sub Button3_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button3.MouseLeave
+        Label6.Text = ""
+    End Sub
+
+    Private Sub Button3_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button3.MouseMove
+        Label6.Text = "export the current page file..."
+    End Sub
+
+    Private Sub Button2_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.MouseLeave
+        Label6.Text = ""
+    End Sub
+
+    Private Sub Button2_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button2.MouseMove
+        Label6.Text = "export current library completely..."
+    End Sub
+
+    Private Sub Button7_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button7.MouseLeave
+        Label6.Text = ""
+    End Sub
+
+    Private Sub Button7_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button7.MouseMove
+        Label6.Text = "clean the pages for new library"
+    End Sub
+
+    Private Sub Button1_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+        Label6.Text = ""
+    End Sub
+
+    Private Sub Button1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button1.MouseMove
+        Label6.Text = "set the new library name"
+    End Sub
+
+    Private Sub MakeOldVersionLibraryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MakeOldVersionLibraryToolStripMenuItem.Click
+        Call make_library()
+    End Sub
+
+    Private Sub Button2_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button2.MouseUp
+        Me.popup_menu.Show(Me.Location.X + Button2.Location.X + e.X, Me.Location.Y + Button2.Location.Y + e.Y)
+    End Sub
+
+    Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
+        MsgBox(property_msg.Text, vbInformation, "library.properties")
+    End Sub
+
+    Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
+        SaveFileDialog1.Title = "Save custom file to:"
+        SaveFileDialog1.FileName = "File"
+        SaveFileDialog1.Filter = "Arduino sketch file (*.ino)|*.ino|Arduino Header file (*.h)|*.h|Arduino Source file (*.cpp)|*.cpp|Arduino Text file (*.txt)|*.txt|All files (*.*)|*.*"
+        SaveFileDialog1.ShowDialog()
+        lbl_custom.Text = SaveFileDialog1.FileName
+        If lbl_custom.Text = "" Then Exit Sub
+
+        System.IO.File.WriteAllText(lbl_custom.Text, TextBox8.Text)
+
+        MessageBox.Show("File saved successfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+    End Sub
+
+    Private Sub TabPage5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage5.Click
+
+    End Sub
+
+    Private Sub Button18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button18.Click
+        On Error Resume Next
+        Dim prop_path As String
+
+        OpenFileDialog1.Title = "Select a properties file:"
+        OpenFileDialog1.FileName = ""
+        OpenFileDialog1.Filter = "Arduino Library UTF8 format Properties files (*.properties)|*.properties|All files (*.*)|*.*"
+        OpenFileDialog1.ShowDialog()
+        prop_path = OpenFileDialog1.FileName
+
+
+        TextBox7.Text = System.IO.File.ReadAllText(prop_path, System.Text.Encoding.UTF8)
+    End Sub
+
+    Private Sub Button19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button19.Click
+        SaveFileDialog1.Title = "Save properties file to:"
+        SaveFileDialog1.FileName = "library"
+        SaveFileDialog1.Filter = "Arduino UTF8 format Properties file (*.properties)|*.properties|All files (*.*)|*.*"
+        SaveFileDialog1.ShowDialog()
+        lbl_prop.Text = SaveFileDialog1.FileName
+        If lbl_prop.Text = "" Then Exit Sub
+
+        System.IO.File.WriteAllText(lbl_prop.Text, TextBox7.Text, System.Text.Encoding.UTF8)
+
+        MessageBox.Show("Properties file saved successfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+    End Sub
+
+    Private Sub MakeNewVersionLibraryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MakeNewVersionLibraryToolStripMenuItem.Click
+        Call make_new_library()
+    End Sub
+
+
+    Private Sub make_new_library()
+
+        Dim dirpath As String
+
+        FolderBrowserDialog1.ShowNewFolderButton = True
+        FolderBrowserDialog1.ShowDialog()
+        dirpath = FolderBrowserDialog1.SelectedPath
+        If System.IO.Directory.Exists(dirpath + "\" + TextBox4.Text) = True Then
+            Dim t As String
+            t = MsgBox(dirpath + "\" + TextBox4.Text + vbCrLf + "do you want to replace it?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "same detected!")
+            If t = vbOK Then
+                System.IO.Directory.Delete(dirpath + "\" + TextBox4.Text, True)
+            Else
+                Exit Sub
+            End If
+        End If
+        If dirpath <> "" Then
+            MkDir(dirpath + "\" + TextBox4.Text)
+            MkDir(dirpath + "\" + TextBox4.Text + "\extras")
+            MkDir(dirpath + "\" + TextBox4.Text + "\src")
+            'header
+            System.IO.File.WriteAllText(dirpath + "\" + TextBox4.Text + "\src\" + "\" + TextBox4.Text + ".h", TextBox1.Text)
+
+            'source
+            System.IO.File.WriteAllText(dirpath + "\" + TextBox4.Text + "\src\" + "\" + TextBox4.Text + ".cpp", TextBox2.Text)
+            'keywords
+            System.IO.File.WriteAllText(dirpath + "\" + TextBox4.Text + "\keywords.txt", TextBox3.Text)
+            'property
+            System.IO.File.WriteAllText(dirpath + "\" + TextBox4.Text + "\library.properties", TextBox7.Text, System.Text.Encoding.UTF8)
+
+            'example
+
+            MkDir(dirpath + "\" + TextBox4.Text + "\examples")
+            MkDir(dirpath + "\" + TextBox4.Text + "\examples\" + TextBox6.Text)
+            System.IO.File.WriteAllText(dirpath + "\" + TextBox4.Text + "\examples\" + TextBox6.Text + "\" + TextBox6.Text + ".ino", TextBox5.Text)
+
+            MessageBox.Show("Library made successfuly!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 End Class

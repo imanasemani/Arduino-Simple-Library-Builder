@@ -35,7 +35,7 @@ Partial Class Form2
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ArduLib.My.Resources.Resources.about
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, -63)
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, -60)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(785, 237)
         Me.PictureBox1.TabIndex = 0
@@ -82,7 +82,9 @@ Partial Class Form2
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form2"
         Me.Opacity = 0.88R
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
