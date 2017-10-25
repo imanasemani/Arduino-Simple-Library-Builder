@@ -1,11 +1,6 @@
 ﻿Public Class Form2
 
-    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-        Form1.Show()
-        Me.Visible = False
-        Timer1.Enabled = False
-    End Sub
-
+  
     
 
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -20,5 +15,10 @@
 
     End Sub
 
-  
+
+    Private Sub Timer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer.Tick
+        Form1.Show()
+        Me.Visible = False
+        Timer.Enabled = False
+    End Sub
 End Class

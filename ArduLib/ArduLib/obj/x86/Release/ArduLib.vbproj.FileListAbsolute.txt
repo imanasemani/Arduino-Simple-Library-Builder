@@ -15,3 +15,7 @@ C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\obj\x86\Releas
 C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\obj\x86\Release\ArduLib.exe
 C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\obj\x86\Release\ArduLib.xml
 C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\obj\x86\Release\ArduLib.pdb
+C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\bin\Release\itextsharp.dll
+C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\bin\Release\itextsharp.pdfa.dll
+C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\bin\Release\itextsharp.xtra.dll
+C:\Documents and Settings\Asemani\Desktop\ArduLib\ArduLib\ArduLib\bin\Release\itextsharp.xml

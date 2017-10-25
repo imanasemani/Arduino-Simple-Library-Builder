@@ -140,6 +140,8 @@ inline
 bool
 while
 position
+undef
+elif
 _h
 .h
 ::

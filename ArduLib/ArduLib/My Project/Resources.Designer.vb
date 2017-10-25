@@ -95,9 +95,16 @@ Namespace My.Resources
             End Get
         End Property
         
-        Friend ReadOnly Property anim_loading_sm_082208_1_() As System.Drawing.Bitmap
+        Friend ReadOnly Property anim_loading() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("anim_loading_sm_082208[1]", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("anim_loading", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property category() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("category", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -106,6 +113,27 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("info", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property itextsharp() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("itextsharp", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        Friend ReadOnly Property itextsharp_pdfa() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("itextsharp_pdfa", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        Friend ReadOnly Property itextsharp_xtra() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("itextsharp_xtra", resourceCulture)
+                Return CType(obj,Byte())
             End Get
         End Property
         

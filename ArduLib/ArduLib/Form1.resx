@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox1.Text" xml:space="preserve">
+  <data name="txt_header.Text" xml:space="preserve">
     <value>//This is a bit of defensive coding that prevents someone from “double including” the header file information
 #ifndef Blinking_h
 #define Blinking_h
@@ -134,9 +134,6 @@
   #include "WConstants.h"
 #endif
 
-// #include &lt;inttypes.h&gt;
-// #include &lt;Stream.h&gt;
-// #include &lt;SoftwareSerial.h&gt;
 
 class Blinking
 {
@@ -182,12 +179,9 @@ class New
 
 #endif</value>
   </data>
-  <data name="TextBox2.Text" xml:space="preserve">
+  <data name="txt_source.Text" xml:space="preserve">
     <value>#include "Blinking.h"
-// #include &lt;string.h&gt;
-// #include &lt;inttypes.h&gt;
-// #include &lt;Print.h&gt;
-// #include &lt;Stream.h&gt;
+
 
 Blinking::Blinking()
 {
@@ -208,7 +202,7 @@ void Blinking::startBlink(int pin,int dlay)
 
 </value>
   </data>
-  <data name="TextBox3.Text" xml:space="preserve">
+  <data name="txt_keywords.Text" xml:space="preserve">
     <value>#######################################
 # Syntax Coloring Map For Blinking 
 #######################################
@@ -254,6 +248,12 @@ New	KEYWORD1
 #######################################
 
 startNew	KEYWORD2
+
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
 
 #######################################
 # Constants (LITERAL1)
@@ -331,17 +331,16 @@ sketch as #include &lt;...&gt; lines. This property is used with the "Include li
 the IDE. If the property is undefined all the headers files (.h) on the root source folder are
 included.</value>
   </data>
-  <data name="TextBox7.Text" xml:space="preserve">
+  <data name="txt_property.Text" xml:space="preserve">
     <value>name=Blinking
-version=1.0
-author=Iman Asemani &lt;Post.Asemani@Gmail.Com&gt;
+version=1.0.0
+author=Iman Asemani
 maintainer=Asemani Personal Laboratory &lt;Post.Asemani@Gmail.Com&gt;
-sentence=A library that makes digital pulse's on arduino digital pin's
-paragraph=make pulse's on digital pin's with custom duration
+sentence=make digital pulses.
+paragraph=A library that make digital pulses on selected digital pin with custom duration.
 category=Signal Input/Output
 url=https://github.com/imanasemani/Arduino-Simple-Library-Builder
-architectures=*
-includes=Blinking.h</value>
+architectures=avr</value>
   </data>
   <metadata name="SaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>25, 11</value>
@@ -352,11 +351,14 @@ includes=Blinking.h</value>
   <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>310, 12</value>
   </metadata>
-  <metadata name="popup_menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="popup_menu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>442, 12</value>
   </metadata>
+  <metadata name="popup_menu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>565, 12</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>56</value>
+    <value>54</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

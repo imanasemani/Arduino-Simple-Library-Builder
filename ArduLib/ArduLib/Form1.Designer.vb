@@ -29,7 +29,7 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.pic_msg = New System.Windows.Forms.PictureBox()
         Me.Button13 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.txt_header = New System.Windows.Forms.RichTextBox()
         Me.txt_header_temp = New System.Windows.Forms.TextBox()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.lbl_header_file = New System.Windows.Forms.Label()
@@ -37,7 +37,7 @@ Partial Class Form1
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.pic_msg2 = New System.Windows.Forms.PictureBox()
         Me.Button14 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.txt_source = New System.Windows.Forms.RichTextBox()
         Me.txt_source_temp = New System.Windows.Forms.TextBox()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.lbl_source_file = New System.Windows.Forms.Label()
@@ -45,7 +45,7 @@ Partial Class Form1
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.pic_msg3 = New System.Windows.Forms.PictureBox()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.txt_keywords = New System.Windows.Forms.RichTextBox()
         Me.txt_key_temp = New System.Windows.Forms.TextBox()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.lbl_keywoeds_file = New System.Windows.Forms.Label()
@@ -53,42 +53,60 @@ Partial Class Form1
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.pic_msg4 = New System.Windows.Forms.PictureBox()
         Me.Button16 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.RichTextBox()
+        Me.txt_example = New System.Windows.Forms.RichTextBox()
         Me.txt_exam_temp = New System.Windows.Forms.TextBox()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.lbl_example_file = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txt_exam_name = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.property_temp = New System.Windows.Forms.Label()
         Me.lbl_prop = New System.Windows.Forms.Label()
         Me.Button18 = New System.Windows.Forms.Button()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
         Me.property_msg = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.RichTextBox()
+        Me.txt_property = New System.Windows.Forms.RichTextBox()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.lbl_custom = New System.Windows.Forms.Label()
         Me.Button17 = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.RichTextBox()
+        Me.txt_custom = New System.Windows.Forms.RichTextBox()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.txtText = New System.Windows.Forms.RichTextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtSubject = New System.Windows.Forms.TextBox()
+        Me.txt_author = New System.Windows.Forms.TextBox()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.txtTitle = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.btn_new_name = New System.Windows.Forms.Button()
+        Me.txt_new_name = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_publish = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.btn_new = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.popup_menu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MakeOldVersionLibraryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MakeNewVersionLibraryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_open = New System.Windows.Forms.Button()
+        Me.popup_menu1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.MakeNewVersionLibraryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MakeOldVersionLibraryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.popup_menu2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.OpenNewVersionLibraryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenOldVersionLibraryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.pic_msg, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,19 +118,23 @@ Partial Class Form1
         CType(Me.pic_msg4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage6.SuspendLayout()
         Me.TabPage7.SuspendLayout()
+        Me.TabPage8.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.popup_menu.SuspendLayout()
+        Me.popup_menu1.SuspendLayout()
+        Me.popup_menu2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
+        Me.TabControl1.AccessibleName = ""
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Controls.Add(Me.TabPage7)
+        Me.TabControl1.Controls.Add(Me.TabPage8)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(12, 66)
@@ -128,7 +150,7 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.pic_msg)
         Me.TabPage1.Controls.Add(Me.Button13)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.txt_header)
         Me.TabPage1.Controls.Add(Me.txt_header_temp)
         Me.TabPage1.Controls.Add(Me.Button8)
         Me.TabPage1.Controls.Add(Me.lbl_header_file)
@@ -175,16 +197,16 @@ Partial Class Form1
         Me.Button13.Text = "Code parser [F5]"
         Me.Button13.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txt_header
         '
-        Me.TextBox1.AutoWordSelection = True
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(7, 7)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
-        Me.TextBox1.Size = New System.Drawing.Size(868, 419)
-        Me.TextBox1.TabIndex = 12
-        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
+        Me.txt_header.AutoWordSelection = True
+        Me.txt_header.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_header.Location = New System.Drawing.Point(7, 7)
+        Me.txt_header.Name = "txt_header"
+        Me.txt_header.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
+        Me.txt_header.Size = New System.Drawing.Size(868, 419)
+        Me.txt_header.TabIndex = 12
+        Me.txt_header.Text = resources.GetString("txt_header.Text")
         '
         'txt_header_temp
         '
@@ -234,7 +256,7 @@ Partial Class Form1
         '
         Me.TabPage2.Controls.Add(Me.pic_msg2)
         Me.TabPage2.Controls.Add(Me.Button14)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.txt_source)
         Me.TabPage2.Controls.Add(Me.txt_source_temp)
         Me.TabPage2.Controls.Add(Me.Button9)
         Me.TabPage2.Controls.Add(Me.lbl_source_file)
@@ -272,15 +294,15 @@ Partial Class Form1
         Me.Button14.Text = "Code parser [F5]"
         Me.Button14.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txt_source
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(7, 7)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(868, 419)
-        Me.TextBox2.TabIndex = 13
-        Me.TextBox2.Text = resources.GetString("TextBox2.Text")
+        Me.txt_source.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_source.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.txt_source.Location = New System.Drawing.Point(7, 7)
+        Me.txt_source.Name = "txt_source"
+        Me.txt_source.Size = New System.Drawing.Size(868, 419)
+        Me.txt_source.TabIndex = 13
+        Me.txt_source.Text = resources.GetString("txt_source.Text")
         '
         'txt_source_temp
         '
@@ -330,7 +352,7 @@ Partial Class Form1
         '
         Me.TabPage3.Controls.Add(Me.pic_msg3)
         Me.TabPage3.Controls.Add(Me.Button12)
-        Me.TabPage3.Controls.Add(Me.TextBox3)
+        Me.TabPage3.Controls.Add(Me.txt_keywords)
         Me.TabPage3.Controls.Add(Me.txt_key_temp)
         Me.TabPage3.Controls.Add(Me.Button10)
         Me.TabPage3.Controls.Add(Me.lbl_keywoeds_file)
@@ -367,16 +389,16 @@ Partial Class Form1
         Me.Button12.Text = "Insert [ tab space ] between keywords"
         Me.Button12.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txt_keywords
         '
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox3.Location = New System.Drawing.Point(7, 7)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(868, 419)
-        Me.TextBox3.TabIndex = 15
-        Me.TextBox3.Text = resources.GetString("TextBox3.Text")
+        Me.txt_keywords.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_keywords.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.txt_keywords.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txt_keywords.Location = New System.Drawing.Point(7, 7)
+        Me.txt_keywords.Name = "txt_keywords"
+        Me.txt_keywords.Size = New System.Drawing.Size(868, 419)
+        Me.txt_keywords.TabIndex = 15
+        Me.txt_keywords.Text = resources.GetString("txt_keywords.Text")
         '
         'txt_key_temp
         '
@@ -426,11 +448,11 @@ Partial Class Form1
         '
         Me.TabPage5.Controls.Add(Me.pic_msg4)
         Me.TabPage5.Controls.Add(Me.Button16)
-        Me.TabPage5.Controls.Add(Me.TextBox5)
+        Me.TabPage5.Controls.Add(Me.txt_example)
         Me.TabPage5.Controls.Add(Me.txt_exam_temp)
         Me.TabPage5.Controls.Add(Me.Button11)
         Me.TabPage5.Controls.Add(Me.lbl_example_file)
-        Me.TabPage5.Controls.Add(Me.TextBox6)
+        Me.TabPage5.Controls.Add(Me.txt_exam_name)
         Me.TabPage5.Controls.Add(Me.Label4)
         Me.TabPage5.Controls.Add(Me.Button6)
         Me.TabPage5.Location = New System.Drawing.Point(4, 25)
@@ -465,15 +487,15 @@ Partial Class Form1
         Me.Button16.Text = "Code parser [F5]"
         Me.Button16.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'txt_example
         '
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(6, 5)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(868, 419)
-        Me.TextBox5.TabIndex = 16
-        Me.TextBox5.Text = "#include <Blinking.h>" & Global.Microsoft.VisualBasic.ChrW(10) & "Blinking bTest;" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "void setup()" & Global.Microsoft.VisualBasic.ChrW(10) & "{" & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "void loop()" & Global.Microsoft.VisualBasic.ChrW(10) & "{" & Global.Microsoft.VisualBasic.ChrW(10) & "    bTest." & _
+        Me.txt_example.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_example.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.txt_example.Location = New System.Drawing.Point(6, 6)
+        Me.txt_example.Name = "txt_example"
+        Me.txt_example.Size = New System.Drawing.Size(868, 419)
+        Me.txt_example.TabIndex = 16
+        Me.txt_example.Text = "#include <Blinking.h>" & Global.Microsoft.VisualBasic.ChrW(10) & "Blinking bTest;" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "void setup()" & Global.Microsoft.VisualBasic.ChrW(10) & "{" & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10) & "void loop()" & Global.Microsoft.VisualBasic.ChrW(10) & "{" & Global.Microsoft.VisualBasic.ChrW(10) & "    bTest." & _
             "startBlink(13,100);" & Global.Microsoft.VisualBasic.ChrW(10) & "}" & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'txt_exam_temp
@@ -508,17 +530,17 @@ Partial Class Form1
         Me.lbl_example_file.TabIndex = 11
         Me.lbl_example_file.Visible = False
         '
-        'TextBox6
+        'txt_exam_name
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.TextBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox6.Location = New System.Drawing.Point(203, 434)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(201, 22)
-        Me.TextBox6.TabIndex = 10
-        Me.TextBox6.TabStop = False
-        Me.TextBox6.Text = "BlinkTest"
+        Me.txt_exam_name.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.txt_exam_name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txt_exam_name.Location = New System.Drawing.Point(203, 434)
+        Me.txt_exam_name.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_exam_name.Name = "txt_exam_name"
+        Me.txt_exam_name.Size = New System.Drawing.Size(201, 22)
+        Me.txt_exam_name.TabIndex = 10
+        Me.txt_exam_name.TabStop = False
+        Me.txt_exam_name.Text = "BlinkTest"
         '
         'Label4
         '
@@ -545,18 +567,30 @@ Partial Class Form1
         '
         'TabPage6
         '
+        Me.TabPage6.Controls.Add(Me.property_temp)
         Me.TabPage6.Controls.Add(Me.lbl_prop)
         Me.TabPage6.Controls.Add(Me.Button18)
         Me.TabPage6.Controls.Add(Me.Button19)
         Me.TabPage6.Controls.Add(Me.Button15)
         Me.TabPage6.Controls.Add(Me.property_msg)
-        Me.TabPage6.Controls.Add(Me.TextBox7)
+        Me.TabPage6.Controls.Add(Me.txt_property)
         Me.TabPage6.Location = New System.Drawing.Point(4, 25)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Size = New System.Drawing.Size(892, 471)
         Me.TabPage6.TabIndex = 6
         Me.TabPage6.Text = "library.properties"
         Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'property_temp
+        '
+        Me.property_temp.Location = New System.Drawing.Point(620, 437)
+        Me.property_temp.Name = "property_temp"
+        Me.property_temp.Size = New System.Drawing.Size(31, 17)
+        Me.property_temp.TabIndex = 23
+        Me.property_temp.Text = "name=New" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "version=1.0.0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "author=" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "maintainer=" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "sentence=" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "paragraph=" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "category=" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & _
+            "url=https://github.com/imanasemani/Arduino-Simple-Library-Builder" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "architectures" & _
+            "=avr"
+        Me.property_temp.Visible = False
         '
         'lbl_prop
         '
@@ -612,28 +646,41 @@ Partial Class Form1
         Me.property_msg.Text = resources.GetString("property_msg.Text")
         Me.property_msg.Visible = False
         '
-        'TextBox7
+        'txt_property
         '
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox7.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.TextBox7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox7.Location = New System.Drawing.Point(6, 5)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(868, 419)
-        Me.TextBox7.TabIndex = 17
-        Me.TextBox7.Text = resources.GetString("TextBox7.Text")
+        Me.txt_property.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_property.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.txt_property.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txt_property.Location = New System.Drawing.Point(6, 5)
+        Me.txt_property.Name = "txt_property"
+        Me.txt_property.Size = New System.Drawing.Size(868, 419)
+        Me.txt_property.TabIndex = 17
+        Me.txt_property.Text = resources.GetString("txt_property.Text")
         '
         'TabPage7
         '
+        Me.TabPage7.Controls.Add(Me.Button1)
         Me.TabPage7.Controls.Add(Me.lbl_custom)
         Me.TabPage7.Controls.Add(Me.Button17)
-        Me.TabPage7.Controls.Add(Me.TextBox8)
+        Me.TabPage7.Controls.Add(Me.txt_custom)
         Me.TabPage7.Location = New System.Drawing.Point(4, 25)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Size = New System.Drawing.Size(892, 471)
         Me.TabPage7.TabIndex = 7
-        Me.TabPage7.Text = "custom file"
+        Me.TabPage7.Text = "extra files"
         Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(664, 431)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 29)
+        Me.Button1.TabIndex = 22
+        Me.Button1.TabStop = False
+        Me.Button1.Text = "Import..."
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'lbl_custom
         '
@@ -657,19 +704,120 @@ Partial Class Form1
         Me.Button17.Text = "Save as..."
         Me.Button17.UseVisualStyleBackColor = True
         '
-        'TextBox8
+        'txt_custom
         '
-        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox8.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.TextBox8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox8.Location = New System.Drawing.Point(6, 5)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(868, 419)
-        Me.TextBox8.TabIndex = 18
-        Me.TextBox8.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "blank page file...."
+        Me.txt_custom.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txt_custom.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.txt_custom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txt_custom.Location = New System.Drawing.Point(6, 5)
+        Me.txt_custom.Name = "txt_custom"
+        Me.txt_custom.Size = New System.Drawing.Size(868, 419)
+        Me.txt_custom.TabIndex = 18
+        Me.txt_custom.Text = "" & Global.Microsoft.VisualBasic.ChrW(10) & "blank page file...."
+        '
+        'TabPage8
+        '
+        Me.TabPage8.Controls.Add(Me.txtText)
+        Me.TabPage8.Controls.Add(Me.Label9)
+        Me.TabPage8.Controls.Add(Me.txtSubject)
+        Me.TabPage8.Controls.Add(Me.txt_author)
+        Me.TabPage8.Controls.Add(Me.btnCreate)
+        Me.TabPage8.Controls.Add(Me.txtTitle)
+        Me.TabPage8.Controls.Add(Me.Label10)
+        Me.TabPage8.Controls.Add(Me.Label11)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage8.Name = "TabPage8"
+        Me.TabPage8.Size = New System.Drawing.Size(892, 471)
+        Me.TabPage8.TabIndex = 8
+        Me.TabPage8.Text = "Documentation"
+        Me.TabPage8.UseVisualStyleBackColor = True
+        '
+        'txtText
+        '
+        Me.txtText.AutoWordSelection = True
+        Me.txtText.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtText.Location = New System.Drawing.Point(3, 3)
+        Me.txtText.Name = "txtText"
+        Me.txtText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
+        Me.txtText.Size = New System.Drawing.Size(886, 419)
+        Me.txtText.TabIndex = 28
+        Me.txtText.Text = ""
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(13, 440)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(56, 14)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "Author:"
+        '
+        'txtSubject
+        '
+        Me.txtSubject.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSubject.Location = New System.Drawing.Point(461, 437)
+        Me.txtSubject.Name = "txtSubject"
+        Me.txtSubject.Size = New System.Drawing.Size(100, 20)
+        Me.txtSubject.TabIndex = 24
+        Me.txtSubject.TabStop = False
+        Me.txtSubject.Text = "Blinking"
+        '
+        'txt_author
+        '
+        Me.txt_author.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_author.Location = New System.Drawing.Point(70, 437)
+        Me.txt_author.Name = "txt_author"
+        Me.txt_author.Size = New System.Drawing.Size(110, 20)
+        Me.txt_author.TabIndex = 22
+        Me.txt_author.TabStop = False
+        Me.txt_author.Text = "APL"
+        '
+        'btnCreate
+        '
+        Me.btnCreate.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCreate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnCreate.Location = New System.Drawing.Point(745, 430)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(128, 29)
+        Me.btnCreate.TabIndex = 26
+        Me.btnCreate.TabStop = False
+        Me.btnCreate.Text = "Save PDF as..."
+        Me.btnCreate.UseVisualStyleBackColor = True
+        '
+        'txtTitle
+        '
+        Me.txtTitle.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTitle.Location = New System.Drawing.Point(264, 437)
+        Me.txtTitle.Name = "txtTitle"
+        Me.txtTitle.Size = New System.Drawing.Size(100, 20)
+        Me.txtTitle.TabIndex = 23
+        Me.txtTitle.TabStop = False
+        Me.txtTitle.Text = "Blinking"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(186, 440)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(77, 14)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "PDF Title:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(370, 440)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(91, 14)
+        Me.Label11.TabIndex = 18
+        Me.Label11.Text = "PDF Subject:"
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label8)
         Me.TabPage4.Controls.Add(Me.Label7)
         Me.TabPage4.Controls.Add(Me.PictureBox1)
         Me.TabPage4.Location = New System.Drawing.Point(4, 25)
@@ -679,6 +827,15 @@ Partial Class Form1
         Me.TabPage4.TabIndex = 5
         Me.TabPage4.Text = "...about me"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(158, 276)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(144, 16)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "Arduino community"
         '
         'Label7
         '
@@ -691,73 +848,72 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.ArduLib.My.Resources.Resources.about4
-        Me.PictureBox1.Location = New System.Drawing.Point(1, -8)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Image = Global.ArduLib.My.Resources.Resources.about
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(934, 492)
-        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.Size = New System.Drawing.Size(897, 492)
+        Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'btn_new_name
         '
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Image = Global.ArduLib.My.Resources.Resources.info
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(281, 573)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
-        Me.Button1.TabIndex = 5
-        Me.Button1.TabStop = False
-        Me.Button1.Text = "Set to all"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_new_name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_new_name.Image = Global.ArduLib.My.Resources.Resources.info
+        Me.btn_new_name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_name.Location = New System.Drawing.Point(342, 567)
+        Me.btn_new_name.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_new_name.Name = "btn_new_name"
+        Me.btn_new_name.Size = New System.Drawing.Size(100, 23)
+        Me.btn_new_name.TabIndex = 5
+        Me.btn_new_name.TabStop = False
+        Me.btn_new_name.Text = "Set to all"
+        Me.btn_new_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_name.UseVisualStyleBackColor = True
         '
-        'TextBox4
+        'txt_new_name
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox4.Location = New System.Drawing.Point(137, 576)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(136, 22)
-        Me.TextBox4.TabIndex = 4
-        Me.TextBox4.TabStop = False
-        Me.TextBox4.Text = "Blinking"
+        Me.txt_new_name.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.txt_new_name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txt_new_name.Location = New System.Drawing.Point(140, 567)
+        Me.txt_new_name.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_new_name.Name = "txt_new_name"
+        Me.txt_new_name.Size = New System.Drawing.Size(197, 21)
+        Me.txt_new_name.TabIndex = 4
+        Me.txt_new_name.TabStop = False
+        Me.txt_new_name.Text = "Blinking"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(13, 577)
+        Me.Label1.Location = New System.Drawing.Point(13, 569)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(126, 14)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "New library name:"
         '
-        'Button2
+        'btn_publish
         '
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.Image = Global.ArduLib.My.Resources.Resources.anim_loading_sm_082208_1_
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(684, 573)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Button2.Size = New System.Drawing.Size(137, 27)
-        Me.Button2.TabIndex = 6
-        Me.Button2.TabStop = False
-        Me.Button2.Text = "Publish library"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_publish.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_publish.Image = Global.ArduLib.My.Resources.Resources.anim_loading
+        Me.btn_publish.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_publish.Location = New System.Drawing.Point(680, 573)
+        Me.btn_publish.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_publish.Name = "btn_publish"
+        Me.btn_publish.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btn_publish.Size = New System.Drawing.Size(137, 27)
+        Me.btn_publish.TabIndex = 6
+        Me.btn_publish.TabStop = False
+        Me.btn_publish.Text = "Publish library"
+        Me.btn_publish.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_publish.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(531, 577)
+        Me.Label3.Location = New System.Drawing.Point(140, 590)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 14)
@@ -768,27 +924,27 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(384, 577)
+        Me.Label2.Location = New System.Drawing.Point(12, 590)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(154, 14)
+        Me.Label2.Size = New System.Drawing.Size(133, 14)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Current library name:"
+        Me.Label2.Text = "Current lib. name:"
         '
-        'Button7
+        'btn_new
         '
-        Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button7.Image = Global.ArduLib.My.Resources.Resources.yellowp
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(822, 573)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(88, 27)
-        Me.Button7.TabIndex = 9
-        Me.Button7.TabStop = False
-        Me.Button7.Text = "New lib."
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btn_new.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_new.Image = Global.ArduLib.My.Resources.Resources.yellowp
+        Me.btn_new.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new.Location = New System.Drawing.Point(822, 573)
+        Me.btn_new.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_new.Name = "btn_new"
+        Me.btn_new.Size = New System.Drawing.Size(88, 27)
+        Me.btn_new.TabIndex = 9
+        Me.btn_new.TabStop = False
+        Me.btn_new.Text = "New lib."
+        Me.btn_new.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
         '
@@ -814,12 +970,6 @@ Partial Class Form1
         Me.ListBox1.TabIndex = 16
         Me.ListBox1.Visible = False
         '
-        'popup_menu
-        '
-        Me.popup_menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MakeOldVersionLibraryToolStripMenuItem, Me.MakeNewVersionLibraryToolStripMenuItem})
-        Me.popup_menu.Name = "popup_menu"
-        Me.popup_menu.Size = New System.Drawing.Size(194, 48)
-        '
         'MakeOldVersionLibraryToolStripMenuItem
         '
         Me.MakeOldVersionLibraryToolStripMenuItem.Name = "MakeOldVersionLibraryToolStripMenuItem"
@@ -832,6 +982,57 @@ Partial Class Form1
         Me.MakeNewVersionLibraryToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.MakeNewVersionLibraryToolStripMenuItem.Text = "Make new version library"
         '
+        'btn_open
+        '
+        Me.btn_open.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_open.Image = Global.ArduLib.My.Resources.Resources.category
+        Me.btn_open.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_open.Location = New System.Drawing.Point(565, 573)
+        Me.btn_open.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_open.Name = "btn_open"
+        Me.btn_open.Size = New System.Drawing.Size(111, 27)
+        Me.btn_open.TabIndex = 17
+        Me.btn_open.TabStop = False
+        Me.btn_open.Text = "Open library"
+        Me.btn_open.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_open.UseVisualStyleBackColor = True
+        '
+        'popup_menu1
+        '
+        Me.popup_menu1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MakeNewVersionLibraryToolStripMenuItem1, Me.MakeOldVersionLibraryToolStripMenuItem1})
+        Me.popup_menu1.Name = "ContextMenuStrip1"
+        Me.popup_menu1.Size = New System.Drawing.Size(194, 48)
+        '
+        'MakeNewVersionLibraryToolStripMenuItem1
+        '
+        Me.MakeNewVersionLibraryToolStripMenuItem1.Name = "MakeNewVersionLibraryToolStripMenuItem1"
+        Me.MakeNewVersionLibraryToolStripMenuItem1.Size = New System.Drawing.Size(193, 22)
+        Me.MakeNewVersionLibraryToolStripMenuItem1.Text = "Make new version library"
+        '
+        'MakeOldVersionLibraryToolStripMenuItem1
+        '
+        Me.MakeOldVersionLibraryToolStripMenuItem1.Name = "MakeOldVersionLibraryToolStripMenuItem1"
+        Me.MakeOldVersionLibraryToolStripMenuItem1.Size = New System.Drawing.Size(193, 22)
+        Me.MakeOldVersionLibraryToolStripMenuItem1.Text = "Make old version library"
+        '
+        'popup_menu2
+        '
+        Me.popup_menu2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenNewVersionLibraryToolStripMenuItem, Me.OpenOldVersionLibraryToolStripMenuItem})
+        Me.popup_menu2.Name = "ContextMenuStrip1"
+        Me.popup_menu2.Size = New System.Drawing.Size(195, 48)
+        '
+        'OpenNewVersionLibraryToolStripMenuItem
+        '
+        Me.OpenNewVersionLibraryToolStripMenuItem.Name = "OpenNewVersionLibraryToolStripMenuItem"
+        Me.OpenNewVersionLibraryToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+        Me.OpenNewVersionLibraryToolStripMenuItem.Text = "Open new version library"
+        '
+        'OpenOldVersionLibraryToolStripMenuItem
+        '
+        Me.OpenOldVersionLibraryToolStripMenuItem.Name = "OpenOldVersionLibraryToolStripMenuItem"
+        Me.OpenOldVersionLibraryToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+        Me.OpenOldVersionLibraryToolStripMenuItem.Text = "Open old version library"
+        '
         'Form1
         '
         Me.AllowDrop = True
@@ -840,19 +1041,20 @@ Partial Class Form1
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.BackgroundImage = Global.ArduLib.My.Resources.Resources.main1
+        Me.BackgroundImage = Global.ArduLib.My.Resources.Resources.main
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(925, 608)
+        Me.ClientSize = New System.Drawing.Size(925, 613)
         Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.btn_open)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.btn_new)
+        Me.Controls.Add(Me.btn_publish)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txt_new_name)
         Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.btn_new_name)
         Me.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -879,10 +1081,13 @@ Partial Class Form1
         Me.TabPage6.PerformLayout()
         Me.TabPage7.ResumeLayout(False)
         Me.TabPage7.PerformLayout()
+        Me.TabPage8.ResumeLayout(False)
+        Me.TabPage8.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.popup_menu.ResumeLayout(False)
+        Me.popup_menu1.ResumeLayout(False)
+        Me.popup_menu2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -892,21 +1097,21 @@ Partial Class Form1
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents btn_new_name As System.Windows.Forms.Button
+    Friend WithEvents txt_new_name As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btn_publish As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_exam_name As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents btn_new As System.Windows.Forms.Button
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents lbl_header_file As System.Windows.Forms.Label
     Friend WithEvents lbl_source_file As System.Windows.Forms.Label
@@ -923,10 +1128,10 @@ Partial Class Form1
     Friend WithEvents txt_key_temp As System.Windows.Forms.TextBox
     Friend WithEvents txt_exam_temp As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Public WithEvents TextBox1 As System.Windows.Forms.RichTextBox
-    Public WithEvents TextBox2 As System.Windows.Forms.RichTextBox
-    Public WithEvents TextBox3 As System.Windows.Forms.RichTextBox
-    Public WithEvents TextBox5 As System.Windows.Forms.RichTextBox
+    Public WithEvents txt_header As System.Windows.Forms.RichTextBox
+    Public WithEvents txt_source As System.Windows.Forms.RichTextBox
+    Public WithEvents txt_keywords As System.Windows.Forms.RichTextBox
+    Public WithEvents txt_example As System.Windows.Forms.RichTextBox
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents Button14 As System.Windows.Forms.Button
@@ -943,14 +1148,33 @@ Partial Class Form1
     Friend WithEvents MakeNewVersionLibraryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
-    Public WithEvents TextBox7 As System.Windows.Forms.RichTextBox
+    Public WithEvents txt_property As System.Windows.Forms.RichTextBox
     Friend WithEvents Button15 As System.Windows.Forms.Button
     Friend WithEvents property_msg As System.Windows.Forms.Label
-    Public WithEvents TextBox8 As System.Windows.Forms.RichTextBox
+    Public WithEvents txt_custom As System.Windows.Forms.RichTextBox
     Friend WithEvents Button17 As System.Windows.Forms.Button
     Friend WithEvents lbl_custom As System.Windows.Forms.Label
     Friend WithEvents Button18 As System.Windows.Forms.Button
     Friend WithEvents Button19 As System.Windows.Forms.Button
     Friend WithEvents lbl_prop As System.Windows.Forms.Label
+    Friend WithEvents btn_open As System.Windows.Forms.Button
+    Friend WithEvents property_temp As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TabPage8 As System.Windows.Forms.TabPage
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtSubject As System.Windows.Forms.TextBox
+    Friend WithEvents txt_author As System.Windows.Forms.TextBox
+    Friend WithEvents btnCreate As System.Windows.Forms.Button
+    Friend WithEvents txtTitle As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Public WithEvents txtText As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents popup_menu1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents MakeNewVersionLibraryToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MakeOldVersionLibraryToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents popup_menu2 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents OpenOldVersionLibraryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OpenNewVersionLibraryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -26,8 +26,8 @@ Partial Class Form2
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Timer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -35,27 +35,20 @@ Partial Class Form2
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ArduLib.My.Resources.Resources.about
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, -60)
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, -56)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(785, 237)
+        Me.PictureBox1.Size = New System.Drawing.Size(691, 178)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.InitialImage = Global.ArduLib.My.Resources.Resources.anim_loading_sm_082208_1_
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox2.Image = Global.ArduLib.My.Resources.Resources.anim_loading
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(16, 16)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox2.TabIndex = 11
+        Me.PictureBox2.Size = New System.Drawing.Size(19, 19)
+        Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 2000
         '
         'TextBox1
         '
@@ -67,13 +60,18 @@ Partial Class Form2
         Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         Me.TextBox1.Visible = False
         '
+        'Timer
+        '
+        Me.Timer.Enabled = True
+        Me.Timer.Interval = 2000
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(723, 167)
+        Me.ClientSize = New System.Drawing.Size(682, 116)
         Me.ControlBox = False
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox2)
@@ -95,4 +93,5 @@ Partial Class Form2
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Timer As System.Windows.Forms.Timer
 End Class
