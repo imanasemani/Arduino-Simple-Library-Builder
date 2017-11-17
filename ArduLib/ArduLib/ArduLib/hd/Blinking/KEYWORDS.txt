@@ -1,0 +1,2 @@
+Blinking	KEYWORD1
+startBlink	KEYWORD2
